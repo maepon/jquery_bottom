@@ -17,6 +17,7 @@
 
 		var defaults = {
 			// how close to the scrollbar is to the bottom before triggering the event
+			// ex) 5% : 0.05
 			proximity: 0
 		};
 
@@ -25,6 +26,7 @@
 		return this.each(function() {
 			var obj = this;
 			$(obj).bind("scroll", function() {
+				var scrollHeight = 0,scrollPosition = 0;
 				if (obj == window) {
 					scrollHeight = $(document).height();
 				}
